@@ -38,7 +38,7 @@ wrappers around the libc NSS functions getaddrinfo(), res_query() and related.
 
 %package -n %{libname_devel}
 Summary: Development files for %{name}
-Group: Development/Libraries
+Group: Development/C
 Requires: %{libname} = %{version}-%{release}
 Provides: %{name}-devel = %{version}-%{release}
 
