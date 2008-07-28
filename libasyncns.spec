@@ -67,7 +67,7 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_libdir}/%{name}.so.*
+%{_libdir}/%{name}.so.%{major}*
 
 %files -n %{libname_devel}
 %defattr(-,root,root)
