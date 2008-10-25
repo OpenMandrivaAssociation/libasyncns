@@ -1,6 +1,6 @@
 %define shortname asyncns
 %define name libasyncns
-%define version 0.4
+%define version 0.6
 %define release %mkrel 1
 
 %define major 0
@@ -52,7 +52,7 @@ Development files for %{name}
 %setup -q
 
 %build
-	%configure2_5x --disable-static
+%configure2_5x --disable-static
 %make
 
 %install
