@@ -1,6 +1,6 @@
 %define shortname asyncns
 %define name libasyncns
-%define version 0.6
+%define version 0.7
 %define release %mkrel 1
 
 %define major 0
@@ -15,6 +15,7 @@ Source0: http://0pointer.de/lennart/projects/libasyncns/%{name}-%{version}.tar.g
 License: LGPL
 Group: System/Libraries
 URL: http://0pointer.de/lennart/projects/libasyncns/
+BuildRequires : doxygen
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -71,6 +72,7 @@ rm -rf %{buildroot}
 
 %files -n %{libname_devel}
 %defattr(-,root,root)
+%doc %{_docdir}/%{name}
 %{_includedir}/%{shortname}.h
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
