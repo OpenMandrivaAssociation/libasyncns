@@ -1,7 +1,7 @@
 %define shortname asyncns
 %define name libasyncns
 %define version 0.8
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define major 0
 %define libname %mklibname %shortname %major
