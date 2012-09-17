@@ -5,7 +5,7 @@
 %define libname_devel %mklibname -d %{shortname}
 
 Summary:	A library for executing name service queries asynchronously
-Name:		%{name}
+Name:		libasyncns
 Version:	0.8
 Release:	4
 License:	LGPL
