@@ -7,6 +7,8 @@
 %define libname %mklibname %shortname %major
 %define libname_devel %mklibname -d %shortname
 
+%bcond_with	crosscompile
+
 Summary: A library for executing name service queries asynchronously
 Name: %{name}
 Version: %{version}
@@ -16,7 +18,6 @@ License: LGPL
 Group: System/Libraries
 URL: http://0pointer.de/lennart/projects/libasyncns/
 BuildRequires : doxygen
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A small and lightweight library that implements easy to use asynchronous
@@ -53,25 +54,23 @@ Development files for %{name}
 %setup -q
 
 %build
+autoreconf -fi
+%if %{with crosscompile}
+export ac_cv_func_malloc_0_nonnull=yes
+%endif
 %configure2_5x --disable-static
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 find %{buildroot} \( -name *.a -o -name *.la \) -exec rm -f {} \;
-
-%clean
-rm -rf %{buildroot}
 
 #----------------------------------------------------------------------------
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/%{name}.so.%{major}*
 
 %files -n %{libname_devel}
-%defattr(-,root,root)
 %doc %{_docdir}/%{name}
 %{_includedir}/%{shortname}.h
 %{_libdir}/%{name}.so
