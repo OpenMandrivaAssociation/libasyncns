@@ -8,7 +8,7 @@
 Summary:	A library for executing name service queries asynchronously
 Name:		libasyncns
 Version:	0.8
-Release:	11
+Release:	12
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://0pointer.de/lennart/projects/libasyncns/
