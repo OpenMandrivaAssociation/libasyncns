@@ -38,18 +38,18 @@ Provides:	%{name}-devel = %{version}-%{release}
 Development files for %{name}
 
 %prep
-%setup -q
+%autosetup -p1
 autoreconf -fi
 %if %{with crosscompile}
 export ac_cv_func_malloc_0_nonnull=yes
 %endif
 
 %build
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/%{name}.so.%{major}*
