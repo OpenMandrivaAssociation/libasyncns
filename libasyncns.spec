@@ -8,11 +8,12 @@
 Summary:	A library for executing name service queries asynchronously
 Name:		libasyncns
 Version:	0.8
-Release:	21
+Release:	22
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://0pointer.de/lennart/projects/libasyncns/
 Source0:	http://0pointer.de/lennart/projects/libasyncns/%{name}-%{version}.tar.gz
+Patch0:		libasyncns-no-Lusrlib.patch
 BuildRequires :	doxygen
 
 %description
@@ -59,4 +60,3 @@ export ac_cv_func_malloc_0_nonnull=yes
 %{_includedir}/%{sname}.h
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
-

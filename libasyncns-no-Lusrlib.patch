@@ -1,0 +1,15 @@
+diff -up libasyncns-0.8/libasyncns.pc.in.omv~ libasyncns-0.8/libasyncns.pc.in
+--- libasyncns-0.8/libasyncns.pc.in.omv~	2020-09-13 17:28:08.467530114 +0200
++++ libasyncns-0.8/libasyncns.pc.in	2020-09-13 17:28:21.862626559 +0200
+@@ -1,10 +1,7 @@
+ prefix=@prefix@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
+-includedir=${prefix}/include
+ 
+ Name: libasyncns
+ Description: Asynchronous Name Service
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lasyncns
+-Cflags: -I${includedir}
++Libs: -lasyncns
