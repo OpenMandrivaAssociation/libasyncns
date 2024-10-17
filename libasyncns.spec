@@ -11,7 +11,7 @@ Version:	0.8
 Release:	23
 License:	LGPLv2
 Group:		System/Libraries
-Url:		http://0pointer.de/lennart/projects/libasyncns/
+Url:		https://0pointer.de/lennart/projects/libasyncns/
 Source0:	http://0pointer.de/lennart/projects/libasyncns/%{name}-%{version}.tar.gz
 Patch0:		libasyncns-no-Lusrlib.patch
 BuildRequires :	doxygen
