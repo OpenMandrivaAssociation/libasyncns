@@ -14,6 +14,11 @@ Group:		System/Libraries
 Url:		https://0pointer.de/lennart/projects/libasyncns/
 Source0:	http://0pointer.de/lennart/projects/libasyncns/%{name}-%{version}.tar.gz
 Patch0:		libasyncns-no-Lusrlib.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires :	doxygen
 
 %description
